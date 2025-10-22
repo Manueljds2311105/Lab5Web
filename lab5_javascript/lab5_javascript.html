@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mengenal JavaScript</title>
+
+  <script language = "JavaScript"  >
+    function pesan() {
+      alert("Memanggil JavaScript lewat body onload");
+    }
+    function ubahWarnaLB(warna) {
+      document.bgColor = warna;
+    }
+    function ubahWarnaLD(warna) {
+      document.fgColor = warna;
+    }
+    function hitung(ele) {
+      var total = document.getElementById('total').value;
+      total = (total ? parseInt(total) : 0);
+      var harga = parseInt(ele.value);
+
+      if (ele.checked) {
+        total += harga;
+      } else {
+        total -= harga;
+      }
+      document.getElementById('total').value = total;
+    }
+    function operasi(val1, val2) {
+      document.write("<h3>Operasi Aritmatika</h3>");
+      document.write("Perkalian: " + (val1 * val2) + "<br>");
+      document.write("Pembagian: " + (val1 / val2) + "<br>");
+      document.write("Penjumlahan: " + (val1 + val2) + "<br>");
+      document.write("Pengurangan: " + (val1 - val2) + "<br>");
+      document.write("Modulus: " + (val1 % val2) + "<br>");
+    }
+    function test() {
+      var val1 = document.kirim.T1.value;
+      if (val1 % 2 == 0)
+        document.kirim.T2.value = "Bilangan Genap";
+      else
+        document.kirim.T2.value = "Bilangan Ganjil";
+    }
+  </script>
+</head>
+
+<body onload="pesan()">
+  <h1>Pengenalan JavaScript</h1>
+  <h3>Contoh document.write, prompt, dan if-else</h3>
+
+  <script language = "JavaScript">
+    window.alert("Ini merupakan pesan untuk Anda");
+    document.write("Hello, World!<br>");
+    document.write("Selamat mencoba JavaScript!<br>");
+    document.write("Semoga sukses!<br>");
+    console.log("Hello World");
+
+    var nama = prompt("Siapa nama Anda?", "Masukkan nama Anda");
+    document.write("Hai, " + nama + "<br>");
+
+    var nilai = prompt("Nilai (0-100): ", 0);
+    var hasil = (nilai >= 60) ? "Lulus" : "Tidak Lulus";
+    document.write("Hasil: " + hasil + "<br>");
+  </script>
+
+  <hr>
+
+  <h2>Operasi Aritmatika</h2>
+  <input type="button" value="Hitung 9 dan 2" onclick="operasi(9,2)">
+
+  <hr>
+
+  <h2>Form Tebak Bilangan</h2>
+  <form method="POST" name="kirim">
+    <p>BIL: <input type="text" name="T1" size="20"></p>
+    MERUPAKAN BIL: <input type="text" name="T2" size="20">
+    <p><input type="button" value="TEBAK" onclick="test()"></p>
+  </form>
+
+  <hr>
+
+  <h2>Ubah Warna Halaman</h2>
+  <form>
+    <input type="button" value="Latar Hijau" onclick="ubahWarnaLB('GREEN')">
+    <input type="button" value="Latar Putih" onclick="ubahWarnaLB('WHITE')">
+    <input type="button" value="Teks Kuning" onclick="ubahWarnaLD('YELLOW')">
+    <input type="button" value="Teks Biru" onclick="ubahWarnaLD('BLUE')">
+  </form>
+
+  <hr>
+
+  <h2>Daftar Menu Makanan</h2>
+  <label><input type="checkbox" value="15000" onclick="hitung(this);"> Nasi Goreng Rp.15.000</label><br>
+  <label><input type="checkbox" value="12000" onclick="hitung(this);"> Mie Goreng Rp.12.000</label><br>
+  <label><input type="checkbox" value="10000" onclick="hitung(this);"> Bubur Ayam Rp.10.000</label><br>
+  <strong>Total Bayar: Rp. <input id="total" type="text" readonly></strong>
+
+  <hr>
+  <script language = "JavaScript">
+    document.write("Dimodifikasi terakhir pada " + document.lastModified);
+  </script>
+</body>
+</html>

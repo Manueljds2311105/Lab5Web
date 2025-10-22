@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validasi Form - Praktikum 5 JavaScript</title>
+
+  <script language="JavaScript">
+    // Fungsi validasi form
+    function validasiForm() {
+      // Ambil nilai dari input form
+      let nama = document.getElementById("nama").value;
+      let email = document.getElementById("email").value;
+      let umur = document.getElementById("umur").value;
+
+      // Cek apakah kolom kosong
+      if (nama === "" || email === "" || umur === "") {
+        alert("⚠️ Semua kolom wajib diisi!");
+        return false; // menghentikan pengiriman form
+      }
+
+      // Validasi umur harus angka dan minimal 1
+      if (umur <= 0 || isNaN(umur)) {
+        alert("❌ Umur harus berupa angka yang valid!");
+        return false;
+      }
+
+      // Validasi format email sederhana
+      let polaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!polaEmail.test(email)) {
+        alert("📧 Format email tidak valid!");
+        return false;
+      }
+
+      // Jika semua benar
+      alert("✅ Data berhasil dikirim!\nNama: " + nama + "\nEmail: " + email + "\nUmur: " + umur);
+      return true; // form dikirim
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #008CBA;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #006f96;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Form Validasi dengan JavaScript</h2>
+
+  <form onsubmit="return validasiForm()">
+    <label>Nama:</label><br>
+    <input type="text" id="nama" placeholder="Masukkan nama Anda"><br>
+
+    <label>Email:</label><br>
+    <input type="text" id="email" placeholder="contoh@email.com"><br>
+
+    <label>Umur:</label><br>
+    <input type="number" id="umur" placeholder="Masukkan umur Anda"><br>
+
+    <button type="submit">Kirim</button>
+  </form>
+</body>
+</html>
