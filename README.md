@@ -1,19 +1,11 @@
-# 🧩 Praktikum 5 - JavaScript
-**Mata Kuliah:** Pemrograman Web  
-**Dosen Pengampu:** Agung Nugroho  
-**Universitas:** Universitas Pelita Bangsa  
+# Praktikum 5 - JavaScript
+**Nama:** Manuel Johansen Dolok Saribu  
+**Nim:** 312410493  
+**Kelas:** Ti.24.a5  
 
 ---
 
-## 🎯 Tujuan Praktikum
-1. Mahasiswa mampu memahami sintaks dasar JavaScript.  
-2. Mahasiswa mampu memahami penggunaan JavaScript pada halaman web.  
-3. Mahasiswa mampu membuat kode JavaScript sederhana.  
-4. Mahasiswa mampu melakukan manipulasi elemen HTML dengan JavaScript.  
-
----
-
-## 🧠 Dasar Teori
+## Dasar Teori
 
 **JavaScript** adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif dan dinamis.  
 Kode JavaScript bisa ditulis di dalam tag `<script>` pada HTML atau di file eksternal dengan ekstensi `.js`.
@@ -27,16 +19,7 @@ JavaScript dapat digunakan untuk:
 
 ---
 
-## ⚙️ Langkah-Langkah Praktikum
-
-### 1️⃣ Persiapan
-- Buat folder baru dengan nama **`lab5_javascript`**  
-- Buat file baru dengan nama **`lab5_javascript.html`**  
-- Jalankan menggunakan browser (misalnya Google Chrome).
-
----
-
-### 2️⃣ Menampilkan Pesan & “Hello World”
+### Menampilkan Pesan & “Hello World”
 Kode berikut menampilkan teks *Hello World* di halaman dan di konsol browser:
 
 ```html
@@ -47,14 +30,14 @@ Kode berikut menampilkan teks *Hello World* di halaman dan di konsol browser:
 </script>
 ```
 
-📌 **Keterangan:**
+**Keterangan:**
 - `document.write()` → menulis teks langsung ke halaman web.  
 - `console.log()` → menulis pesan ke *console* developer browser (Inspect → Console).  
 - `alert()` → menampilkan pesan popup ke pengguna.
 
 ---
 
-### 3️⃣ Menggunakan `prompt()` dan `if-else`
+### Menggunakan `prompt()` dan `if-else`
 Program berikut meminta input nama dan nilai dari pengguna, lalu menentukan status lulus atau tidak.
 
 ```html
@@ -66,13 +49,13 @@ var hasil = (nilai >= 60) ? "Lulus" : "Tidak Lulus";
 document.write("Hasil: " + hasil + "<br>");
 ```
 
-📘 **Penjelasan:**
+**Penjelasan:**
 - `prompt()` digunakan untuk meminta input dari user.  
 - `if-else` atau operator ternary (`? :`) digunakan untuk membuat keputusan logika.
 
 ---
 
-### 4️⃣ Operasi Aritmatika
+### Operasi Aritmatika
 Menampilkan hasil dari berbagai operasi matematika dasar menggunakan fungsi:
 
 ```html
@@ -86,14 +69,14 @@ function operasi(val1, val2) {
 }
 ```
 
-📌 Dipanggil menggunakan tombol:
+Dipanggil menggunakan tombol:
 ```html
 <input type="button" value="Hitung 9 dan 2" onclick="operasi(9,2)">
 ```
 
 ---
 
-### 5️⃣ Form Tebak Bilangan (Genap / Ganjil)
+### Form Tebak Bilangan (Genap / Ganjil)
 Menentukan apakah angka yang diinput adalah bilangan genap atau ganjil.
 
 ```html
@@ -117,7 +100,7 @@ Form input:
 
 ---
 
-### 6️⃣ Mengubah Warna Latar dan Warna Teks
+### Mengubah Warna Latar dan Warna Teks
 Manipulasi elemen HTML dengan JavaScript:
 
 ```html
@@ -137,7 +120,7 @@ Tombol pengubah warna:
 
 ---
 
-### 7️⃣ Daftar Menu Makanan (Checkbox dan Total Otomatis)
+### Daftar Menu Makanan (Checkbox dan Total Otomatis)
 Program menghitung total harga berdasarkan checkbox yang dipilih.
 
 ```html
@@ -163,7 +146,7 @@ Contoh HTML:
 
 ---
 
-### 8️⃣ Validasi Form
+### Validasi Form
 Form ini melakukan validasi pada input pengguna sebelum dikirim.
 
 ```html
@@ -211,7 +194,7 @@ Form HTML:
 
 ---
 
-## 📸 Hasil Tampilan
+## Hasil Tampilan
 1. Muncul pesan **alert** dan teks “Hello World”.  
 2. Program meminta input nama dan nilai melalui `prompt()`.  
 3. Operasi aritmatika tampil setelah klik tombol.  
@@ -222,22 +205,8 @@ Form HTML:
 
 ---
 
-## 🧾 Laporan Praktikum
-1. Buat repository baru di GitHub dengan nama **Lab5Web**.  
-2. Upload file berikut:
-   - `lab5_javascript.html`
-   - `README.md`
-3. Commit dengan pesan:  
-   ```
-   Menyelesaikan Praktikum 5 - JavaScript
-   ```
-4. Tambahkan screenshot hasil di README atau folder `/img`.  
-5. Kirim URL repository ke e-learning Universitas Pelita Bangsa.
-
----
-
-## ✅ Kesimpulan
-Dari Praktikum 5 ini, mahasiswa dapat:
+## Kesimpulan
+Dari Praktikum 5 ini, dapat:
 - Memahami penggunaan sintaks dasar JavaScript dalam HTML.  
 - Menggunakan perintah `alert()`, `prompt()`, dan `document.write()`.  
 - Menggunakan struktur logika `if-else` dan `switch`.  
@@ -246,8 +215,3 @@ Dari Praktikum 5 ini, mahasiswa dapat:
 - Mengimplementasikan perhitungan dinamis dengan checkbox.
 
 ---
-
-✍️ **Dibuat oleh:**  
-**Nama:** _(Isi Nama Kamu)_  
-**NIM:** _(Isi NIM Kamu)_  
-**Kelas:** _(Isi Kelas Kamu)_
